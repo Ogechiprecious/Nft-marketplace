@@ -43,7 +43,10 @@ body{
     border-radius: 8px; 
     cursor: pointer;
     font-size: .7rem;
-} 
+}
+.ham-menu{
+    display: none;
+}
 
 /* hero section */
 
@@ -52,13 +55,12 @@ body{
     height: 75vh;
     /* background-color: gray;  */
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .hero-left{
     /* background-color: grey;  */
     height: 100%; 
-    flex: 1; 
-    flex-basis: 200px; 
+    flex: 1 0 350px;  
     display: flex;
     justify-content: start;
     align-items: center;
@@ -93,8 +95,7 @@ body{
 .hero-right{
     /* background-color: blue; */
     height: 100%;
-    flex: 1;
-    flex-basis: 200px;
+    flex: 1 0 350px;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -120,7 +121,7 @@ body{
 }
 #small-text{
     text-align: center;
-    font-size: .6rem;
+    font-size: .7rem;
     color: #ffffff;
     font-weight: 100;
 }
@@ -265,7 +266,6 @@ body{
 }
 
 /* listing cards */
-
 .create-card{
     margin: 4rem 0;
 } 
@@ -443,7 +443,6 @@ body{
 .footer{
     display: flex;
     justify-content: space-between;
-    padding: 0 6rem;
     margin: 3rem 0;
 }
 .footer-left .logo-img img{
@@ -472,4 +471,69 @@ body{
     list-style: none;
     font-size: .7rem;
     line-height: 23px;
+}
+
+/* Media queries i.e responsiveness  */
+
+/* Tablets */
+@media screen and (max-width: 400px){
+
+    .main-body{
+        padding: 0 1.5rem;
+    }
+
+    .ham-menu{
+        display: block;
+    }
+    .ham-menu img{
+        width: 70%;
+    }
+    .nav ul{
+        display: none;
+    }
+    .nav button{
+        display: none;
+    }
+
+    .text-content .bold-text{
+        font-size: 2.5rem;
+        font-weight: 250;
+        text-align: center;
+        line-height: 30px;
+    }
+    .text-content .para-text{
+        text-align: center;
+    }
+    .hero-left .para-flex{
+        justify-content: center;
+    }
+
+    .footer{
+        display: block;
+        padding: 0 2rem;
+        margin-bottom: 1rem;
+    }
+    .footer-left .logo-img img{
+        width: 30%;
+    }
+    .footer-left .middle-text{
+        font-size: .7rem;
+        padding: .7rem 0;
+    }
+    .footer-icons{
+        padding-top: .3rem;
+        gap: 2rem;
+    }
+    .footer-right{
+        display: block;
+        padding-top: 1rem;
+    }
+    .resource .resource-bold{
+        font-size: .9rem;
+    }
+    .resource ul li{
+        font-size: .6rem;
+        line-height: 25px;
+    } 
+
 }
